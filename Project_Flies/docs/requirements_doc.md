@@ -9,17 +9,17 @@ The scope of the Schedule Management System will be to provide the functionality
 ## Functional Requirements
 The users of the application are:
 1. Admin - Creates and updated schedules of trainings happening on daily basis. 
-2. Faculty - Find out trainings allocated to him in a specific duration
-Below are the requirements specific to the types of users
+2. Faculty - Find out trainings allocated to him in a specific duration.
+Below are the requirements specific to the types of users:
 
 ### Administrator
-- The admin should be able to create a new training schedule
-- The admin should be able to update or make changes to existing schedules
-- The admin allocates a schedule to a specific trainer
-- The admin should be able to generate a report of the trainings happening on monthly basis for a specific stream
+- The admin should be able to create a new training schedule.
+- The admin should be able to update or make changes to existing schedules.
+- The admin allocates a schedule to a specific trainer.
+- The admin should be able to generate a report of the trainings happening on monthly basis for a specific stream.
 
 ### Faculty
-- The faculty should be able to find out the schedule assigned to him 
+- The faculty should be able to find out the schedule assigned to him.
 - The faculty should be able to cancel a specific session allotted to him.
 
 ### Authentication and Authorization
