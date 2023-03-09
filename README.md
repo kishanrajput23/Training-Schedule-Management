@@ -27,5 +27,5 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please ⭐️ this repository if this project helped you!
 
-## 📌License
+## License
 This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
