@@ -1,6 +1,8 @@
 # Training Schedule Management
 
-## Step 1:
+## How To Setup?
+
+### Step 1:
 
 - First of all download this project in your local system and extract the files. Below are details how you can do that:
 
@@ -14,7 +16,7 @@
 
 3. After downloading `ZIP File` please unzip it.
 
-## Step 2:
+### Step 2:
 
 - Now please open `Project_Flies` folder in your favourite code editor like `VS Code` or you can open in any other editor.
 
@@ -24,7 +26,7 @@
 
 - I hope you have followed all above steps carefully. Now you have to change certain things before running this project.
 
-## Step 3:
+### Step 3:
 
 - Firstly open `main.cpp` file and it should look like this.
 
@@ -46,19 +48,41 @@
 
 <img width="579" alt="image" src="https://user-images.githubusercontent.com/70385488/223942544-a7d52f1c-81ff-4b5d-b970-a6ccf353eb4b.png">
 
-## Step 4:
+### Step 4:
 
-- Now open `adminLogin.h` file.
-- Now you have to make changes in line number 181, 207, 219, 336, 374, 380, 418
+- Open `adminLogin.h` file.
+- Now you have to make changes in line number 181, 207, 219, 336, 374, 380, 418.
 - I hope you have understood that how you can copy the path of any file. If not please refer above images for better understanding.
-- Now copy the path of `schedule.csv` file which is located in `data` folder and pate it in line numbers 181, 207, 219, 336, 374 and 418. 
+- Now copy the path of `schedule.csv` file which is located in `data` folder and paste it in line numbers 181, 207, 219, 336, 374 and 418.
+- Next copy the path of `trainerallotment.csv` file which is also located in `data` folder and paste it in line number 380.
+
+### Step 5:
+
+- Open `facultyLogin.h` file.
+- Now you have to make changes in line number 37.
+- So, copy the path of `trainerallotment.csv` file which is located in `data` folder and paste it in line number 37.
+- Finally you have made the all changes in above files. Now Let's discuss how you gonna run this project successfully.
 
 
+## How To Run?
 
+- For running this project just run the `main.cpp` file and it will redirect you to `Homepage` of **Training Schedule Management** project and it will give you 3 options :
+1. Admin Login
+- For admin login you can use predefined username and password i,e, Username : admin and Password : 12345.
+- After login successfully, it will give you access of all operations that an admin can perform.
 
+**Note:** If an admin enters wrong username and password 3 times consecutively then the program will automatically stops and shows `ACCESS DENIED` to an admin.
 
+2. Faculty Login
+- For faculty login you can use predefined username and password which is already given in `facultyLogin.csv` file.
+- After login successfully, it will give you access of all operations that a faculty can perform.
 
+**Note:** Just like admin if a faculty also enters wrong username and password 3 times consecutively then the program will automatically stops and shows `ACCESS DENIED` to faculty.
 
+3. Exit
+- This option allows an user to exit from the program completely.
 
+## Still Have Confusion?
+- So, after following all above given instructions, still you are facing some difficulties/issues then feel free to reach out to me or just open an issue in this repository and I'll definately get back to you.
 
-
+## Connect With Me [👤](https://linktr.ee/kishan_rajput23)👈
