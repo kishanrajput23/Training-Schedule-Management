@@ -1,21 +1,24 @@
 ---
-Name: Your name
-Title: 'Your feature request name'
-About: Suggest an idea for this project
+name: Feature request
+about: Suggest an idea for this project
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
-**Q : Is your feature request related to a problem? Please describe.**
+**Is your feature request related to a problem? Please describe.**
 
-**Ans :** A clear and concise description of what the problem is. Ex. I'm always frustrated when
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-**Q : Describe the solution you'd like**
+**Describe the solution you'd like**
 
-**Ans :** A clear and concise description of what you want to happen.
+A clear and concise description of what you want to happen.
 
-**Q : Describe alternatives you've considered**
+**Describe alternatives you've considered**
 
-**Ans :** A clear and concise description of any alternative solutions or features you've considered.
+A clear and concise description of any alternative solutions or features you've considered.
 
-**Q : Additional context**
+**Additional context**
 
-**Ans :** Add any other context or screenshots about the feature request here.
+Add any other context or screenshots about the feature request here.
