@@ -65,6 +65,14 @@ public:
             cout << "\n Please enter your choice here : ";
             cin >> opt;
 
+            if (cin.fail())
+        {
+            cin.clear();
+            cin.ignore(512, '\n');
+            cout << "\nOops you've entered wrong input. Taking back you on your dashboard." << endl;
+            facultyModules();
+        }
+
             if (opt == 1)
             {
                 facultyModules();
