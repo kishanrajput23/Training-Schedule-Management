@@ -51,10 +51,10 @@
 ### Step 4:
 
 - Open `adminLogin.h` file.
-- Now you have to make changes in line number 181, 207, 219, 336, 374, 380, 418.
+- Now you have to make changes in line number 205, 231, 243, 310, 356, 362, 408.
 - I hope you have understood that how you can copy the path of any file. If not please refer above images for better understanding.
-- Now copy the path of `schedule.csv` file which is located in `data` folder and paste it in line numbers 181, 207, 219, 336, 374 and 418.
-- Next copy the path of `trainerallotment.csv` file which is also located in `data` folder and paste it in line number 380.
+- Now copy the path of `schedule.csv` file which is located in `data` folder and paste it in line numbers 205, 231, 243, 310, 356 and 408.
+- Next copy the path of `trainerallotment.csv` file which is also located in `data` folder and paste it in line number 362.
 
 ### Step 5:
 
@@ -71,13 +71,13 @@
 - For admin login you can use predefined username and password i,e, Username : admin and Password : 12345.
 - After login successfully, it will give you access of all operations that an admin can perform.
 
-**Note:** If an admin enters wrong username and password 3 times consecutively then the program will automatically stops and shows `ACCESS DENIED` to an admin.
+**Note:** If an admin enters wrong username and password 3 times consecutively then the program will automatically stops and shows `ACCESS DENIED` message to an admin.
 
 2. Faculty Login
 - For faculty login you can use predefined username and password which is already given in `facultyLogin.csv` file.
 - After login successfully, it will give you access of all operations that a faculty can perform.
 
-**Note:** Just like admin if a faculty also enters wrong username and password 3 times consecutively then the program will automatically stops and shows `ACCESS DENIED` to faculty.
+**Note:** Just like admin if a faculty also enters wrong username and password 3 times consecutively then the program will automatically stops and shows `ACCESS DENIED` message to faculty.
 
 3. Exit
 - This option allows an user to exit from the program completely.
