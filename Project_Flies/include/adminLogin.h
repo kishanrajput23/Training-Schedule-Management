@@ -60,6 +60,18 @@ int countNoOfDays(int date1[], int date2[])
     return (abs(dayCount1 - dayCount2));
 }
 
+bool validateString(string str) {
+    bool result = true;
+    for (int i=0; i<str.length(); i++) {
+        if (!isalpha(str[i])) {
+            cout<<"\n Please enter a string value only."<<endl;
+            result = false;
+            break;
+        }
+    }
+    return result;
+}
+
 int batchID, nod, nop;
 string technology, startDate, endDate, venueDetail, month, facultyName;
 
@@ -92,6 +104,10 @@ public:
 
         cout << "Enter the technology name : ";
         getline(cin, technology);
+        
+        if (!validateString(technology)) {
+            createSchedule();
+        }
 
         cout << "Enter the start date of traning (Use Format {DD-MM-YYYY}) : ";
         getline(cin, startDate);
@@ -164,6 +180,10 @@ public:
         cout << "Enter the venue : ";
         getline(cin, venueDetail);
 
+        if (!validateString(venueDetail)) {
+            createSchedule();
+        }
+
         cout << "Enter the total number of participants : ";
         cin >> nop;
         if (cin.fail())
@@ -178,6 +198,10 @@ public:
         cout << "Enter the month of training to be schedule : ";
         cin >> month;
 
+        if (!validateString(month)) {
+            createSchedule();
+        }
+
         ofstream f1("/Users/KI20449224/Downloads/Project_Flies/data/schedule.csv", ios::app);
 
         f1 << batchID << " " << technology << " " << startDate << " " << endDate << " " << nod << " " << venueDetail << " " << nop << " " << month << endl;
@@ -190,7 +214,7 @@ public:
         cout << "\nDo you want to create another schdedule (yes/no) : ";
         cin >> opt;
 
-        if (opt == "yes" || opt == "y" || opt == "YES")
+        if (opt == "yes" || opt == "y" || opt == "YES" || opt == "Y")
         {
             createSchedule();
         }
@@ -247,67 +271,16 @@ public:
 
                 cout << "Enter start date  : ";
                 cin >> sdate;
-                string T;
-                int arr[3];
-                int i = 0, result;
-
-                stringstream X(sdate);
-                while (getline(X, T, '-'))
-                {
-                    int r = stoi(T);
-                    arr[i] = r;
-                    i++;
-                }
-
-                result = checkdate(arr[0], arr[1], arr[2]);
-                int date1[] = {arr[0], arr[1], arr[2]};
-                i = 0;
-
-                if (result == 0)
-                {
-                    cout << "\nOops! you have entered wrong date/format." << endl;
-                    cout << "\nNow please update all the details once again for better result." << endl;
-                    updateSchedule();
-                }
 
                 v[i + 2] = sdate;
 
                 cout << "Enter end date : ";
                 cin >> edate;
 
-                stringstream Y(edate);
-                while (getline(Y, T, '-'))
-                {
-                    int r = stoi(T);
-                    arr[i] = r;
-                    i++;
-                }
-                result = checkdate(arr[0], arr[1], arr[2]);
-                int date2[] = {arr[0], arr[1], arr[2]};
-                i = 0;
-
-                if (result == 0)
-                {
-                    cout << "\nOops! you have entered wrong date/format." << endl;
-                    cout << "\nNow update enter all the details once again for better result." << endl;
-                    updateSchedule();
-                }
-
                 v[i + 3] = edate;
 
                 cout << "Enter number of days : ";
                 cin >> nd;
-
-                int newDay = stoi(nd);
-
-                int diff = countNoOfDays(date1, date2);
-                if (diff != newDay)
-                {
-                    cout << "\nOops! your number of days isn't matching with dates difference." << endl;
-                    cout << "\nIt should be : " << diff << " days" << endl;
-                    cout << "\nNow please enter all the details once again for better result." << endl;
-                    updateSchedule();
-                }
 
                 v[i + 4] = nd;
 
@@ -318,7 +291,8 @@ public:
 
                 cout << "Enter number of participants : ";
                 cin >> nop;
-                v[i + 6] = nop;
+
+                v[i + 6] = to_string(nop);
 
                 cout << "Enter month of start : ";
                 cin >> mos;
@@ -368,8 +342,16 @@ public:
         cout << "\n Please enter a faculty name : ";
         cin >> facultyName;
 
+        if (!validateString(facultyName)) {
+            allotTrainer();
+        }
+
         cout << "\n Please enter a technology name for which you want to assign tariner : ";
         cin >> techName;
+
+        if (!validateString(techName)) {
+            allotTrainer();
+        }
 
         ifstream f2("/Users/KI20449224/Downloads/Project_Flies/data/schedule.csv");
         while (f2 >> batchID >> technology >> startDate >> endDate >> nod >> venueDetail >> nop >> month)
@@ -412,8 +394,16 @@ public:
         cout << "\nPlease enter a month for which you want to generate report : ";
         cin >> mon;
 
+        if (!validateString(mon)) {
+            generateReport();
+        }
+
         cout << "\nPlease enter a technology name : ";
         cin >> tname;
+
+        if (!validateString(tname)) {
+            generateReport();
+        }
 
         ifstream f3("/Users/KI20449224/Downloads/Project_Flies/data/schedule.csv");
         while (f3 >> batchID >> technology >> startDate >> endDate >> nod >> venueDetail >> nop >> month)
